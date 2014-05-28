@@ -1,4 +1,5 @@
-require(File.expand_path(File.dirname(__FILE__)+'/helper.rb'))
+require_relative 'helper'
+
 class StatsampleMatrixTestCase < MiniTest::Unit::TestCase
 
   def setup_square_matrix(arr, n)

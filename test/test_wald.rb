@@ -1,4 +1,4 @@
-require(File.expand_path(File.dirname(__FILE__)+'/helper.rb'))
+require_relative 'helper'
 
 class StatsampleWaldTest < MiniTest::Unit::TestCase
   # Wald test is useful to test a series of n acf with Chi-square

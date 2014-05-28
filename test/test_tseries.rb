@@ -1,4 +1,4 @@
-require(File.expand_path(File.dirname(__FILE__)+'/helper.rb'))
+require_relative 'helper'
 
 class StatsampleTestTimeSeries < MiniTest::Unit::TestCase
   include Statsample::Shorthand

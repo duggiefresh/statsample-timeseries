@@ -1,4 +1,4 @@
-require(File.expand_path(File.dirname(__FILE__)+'/helper.rb'))
+require_relative 'helper'
 
 class StatsampleArimaSimulatorsTest < MiniTest::Unit::TestCase
   def generate_acf(simulation)

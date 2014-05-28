@@ -1,4 +1,5 @@
-require(File.expand_path(File.dirname(__FILE__)+'/helper.rb'))
+require_relative 'helper'
+
 class StatsampleTimeSeriesPacfTestCase < MiniTest::Unit::TestCase
   context(Statsample::TimeSeries) do
     include Statsample::TimeSeries
@@ -9,13 +10,13 @@ class StatsampleTimeSeriesPacfTestCase < MiniTest::Unit::TestCase
     end
 
     should "return correct correct pacf size for lags = 5" do
-      assert_equal @pacf_proc.call(5, 'yw').size, 6 
+      assert_equal @pacf_proc.call(5, 'yw').size, 6
       assert_equal @pacf_proc.call(5, 'mle').size, 6
       #first element is 1.0
     end
 
     should "return correct correct pacf size for lags = 10" do
-      assert_equal @pacf_proc.call(10, 'yw').size, 11 
+      assert_equal @pacf_proc.call(10, 'yw').size, 11
       assert_equal @pacf_proc.call(10, 'mle').size, 11
       #first element is 1.0
     end
